@@ -6,16 +6,17 @@ function searchRecommendation(){
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
 
-    console.log(input);
 
     fetch('travel_recommendation.json')
     .then(response => response.json())
     .then(data => {
         const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
-        console.log(data.countries.citi);
+        console.log(recommendation.cities.forEach(element => {
+            console.log(element.name);
+        }))
 
         if(recommendation){
-            const name = recommendation.name.join(',  ');
+            const name = recommendation
             const imageUrl = recommendation.imageUrl;
             const description = recommendation.description.join(', ');
             resultDiv.innerHTML += `<h2>${name}</h2>`;
