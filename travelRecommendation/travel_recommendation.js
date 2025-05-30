@@ -11,17 +11,21 @@ function searchRecommendation(){
     .then(response => response.json())
     .then(data => {
         const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
+        
         console.log(recommendation.cities.forEach(element => {
             console.log(element.name);
-        }))
+            item = element.name;
+        }));
+
 
         if(recommendation){
-            const name = recommendation
-            const imageUrl = recommendation.imageUrl;
-            const description = recommendation.description.join(', ');
-            resultDiv.innerHTML += `<h2>${name}</h2>`;
-            resultDiv.innerHTML += `<img src="${imageUrl}" alt="hjh">`;
-            resultDiv.innerHTML += `<p><strong>Description:</strong> ${description}</p>`;
+            const name = recommendation.cities.map(x => x.name);
+            const detail = recommendation.cities.map(x => x.description);
+
+            // const imageUrl = recommendation;
+            resultDiv.innerHTML += name.map(n => `<h2>${n}</h2>`) + detail.map(d => `<p><strong>Description:</strong> ${d}</p>`).join('');;
+            // resultDiv.innerHTML += `<img src="${imageUrl}" alt="hjh">`;
+            // resultDiv.innerHTML += detail.map(d => `<p><strong>Description:</strong> ${d}</p>`).join('');
         }
         else{
             resultDiv.innerHTML = 'No recommendations sorry';
