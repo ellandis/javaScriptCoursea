@@ -22,7 +22,6 @@ function searchRecommendation(){
             const name = recommendation.cities.map(x => x.name);
             const detail = recommendation.cities.map(x => x.description);
             const pic = recommendation.cities.map(x => x.imageUrl);
-
             resultDiv.innerHTML += name.map((n, i) => `<h2>${n}</h2><p><strong>Description:</strong> ${detail[i]}</p> <img src="${pic[i]}"/>`).join('');;
         }
         else{
