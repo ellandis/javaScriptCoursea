@@ -21,11 +21,9 @@ function searchRecommendation(){
         if(recommendation){
             const name = recommendation.cities.map(x => x.name);
             const detail = recommendation.cities.map(x => x.description);
+            const pic = recommendation.cities.map(x => x.imageUrl);
 
-            // const imageUrl = recommendation;
-            resultDiv.innerHTML += name.map(n => `<h2>${n}</h2>`) + detail.map(d => `<p><strong>Description:</strong> ${d}</p>`).join('');;
-            // resultDiv.innerHTML += `<img src="${imageUrl}" alt="hjh">`;
-            // resultDiv.innerHTML += detail.map(d => `<p><strong>Description:</strong> ${d}</p>`).join('');
+            resultDiv.innerHTML += name.map((n, i) => `<h2>${n}</h2><p><strong>Description:</strong> ${detail[i]}</p> <img src="${pic[i]}"/>`).join('');;
         }
         else{
             resultDiv.innerHTML = 'No recommendations sorry';
