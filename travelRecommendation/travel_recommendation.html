@@ -1,27 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="travel_recommendation.css">
-    <title>LifeTravel</title>
-</head>
-<body>
-    <div id="navBar">
-        <label id="logo">LifeTravel</label>
-        <a href="home">Home</a>
-        <a href="aboutUs">About Us</a>
-        <a href="contactUs">Contact Us</a>
-        <form id="search">
-            <label for="searchInput">Search</label>
-            <input type="text" name="recommendation" id="recommendation">
-            <button type="submit">Search</button>
-            <button type="reset">Clear</button>
-        </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="travel_recommendation.css" />
+    <title>ExclusiveLifeLessons 🏝️</title>
+    <script
+      src="https://kit.fontawesome.com/f4032d4aff.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <h1 id="hstyle">ExclusiveLifeLessons 🏝️</h1>
+      <ul>
+        <li><a href="homeTitle" id="home">Home</a></li>
+        <li><a href="" id="about">About Us</a></li>
+        <li><a href="" id="contact">Contact Us</a></li>
+        <li>
+          <input
+            type="text"
+            id="travelInput"
+            placeholder="Enter a Recommendation" />
+        </li>
+        <li><button id="btnSearch">Search</button></li>
+        <li><button id="btnClear">Clear</button></li>
+      </ul>
+    </nav>
+    <div id="socialSide">
+      <div id="iconBox">
+        <a href=""><i id="icons" class="fa-brands fa-facebook"></i></a>
+        <a href=""><i id="icons" class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i id="icons" class="fa-brands fa-snapchat"></i></a>
+        <a href=""><i id="icons" class="fa-brands fa-instagram"></i></a>
+      </div>
     </div>
-    <section id="home"></section>
-    <section id="aboutUs"></section>
-    <section id="contactUs"></section>
+    <div id="sections">
+      <h1 id="hstyle">Enjoy Every Life Lesson</h1>
+      <div id="intro">
+        <b>Welcome to ExclusiveLifeLessons—Where Luxury Meets Self-Healing</b
+        ><br />
+        <p id="formatP">
+          Step into a realm where refinement and renewal blend seamlessly.
+          ExclusiveLifeLessons is more than a travel website—it’s your gateway
+          to the world’s most exquisite self-healing experiences. Immerse
+          yourself in elite retreats, holistic wellness escapes, and
+          transformational journeys, all designed to nurture your mind, body,
+          and spirit. Whether it's an intimate wellness sanctuary nestled in the
+          heart of nature or an opulent resort offering tailored rejuvenation
+          programs, we bring you destinations that inspire true growth and
+          restoration. Indulge in bespoke healing therapies, personalized
+          self-discovery workshops, and breathtaking environments curated for
+          transformation. Every journey with us is an invitation to elevate your
+          well-being, embrace mindfulness, and unlock the most exclusive life
+          lessons that the world has to offer. Your path to ultimate renewal
+          begins here. Where will your journey take you?
+        </p>
+        <button>Book Now!</button>
+      </div>
+    </div>
+    <div id="sections">
+      <h1 id="hstyle">About Us</h1>
+      <div id="aboutus">
+        🔥 What Makes ExclusiveLifeLessons Unique? Transformational Journeys:
+        Every expedition blends travel with deep learning experiences—from
+        mastering ancient wisdom in Egypt to decoding innovation in Silicon
+        Valley. Personalized Growth Tracks: Choose from specialized paths like
+        leadership, technology, philosophy, or financial mastery, each featuring
+        expert-led discussions and curated challenges. Mastermind Travel Groups:
+        Travel with like-minded visionaries, exchanging ideas on mountain
+        summits, desert retreats, or historic landmarks. Exclusive Membership:
+        Admission is selective—only the top learners with demonstrated personal
+        development achievements qualify for the journey. 🌍 Featured
+        Expeditions:
+        <ul id="employees">
+          <li id="person">
+            “Wisdom Walks” Journey through ancient civilizations, unlocking
+            philosophical insights from lost teachings.
+          </li>
+          <li id="person">
+            “Innovators’ Odyssey” – A tech-focused retreat exploring global hubs
+            where the next wave of innovation is born.
+          </li>
+          <li id="person">
+            “The Mastery Summit” – An annual gathering where pioneers and
+            self-learners challenge and refine their greatest ideas.
+          </li>
+        </ul>
+        <div id="creators">
+            <ul id="employees">
+                <label for="creators">Our Team</label>
+                <li id="person">🧍🏾‍♀️<b>Olivia Carter</b>Chief Experience Officer (CXO)</li>
+                <li id="person">🧍🏾‍♂️<b>Nathan Reed</b>Director of Membership & Admissions</li>
+                <li id="person">❤️<b>Sophia Martinez</b>Vice President of Innovation & Strategy</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div id="sections">
+        <h1 id="hstyle">Contact Us</h1>
+        <div id="contactUs">
+            <form id="contactForm">
+                <div>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                  <label for="condition">Condition</label>
+                  <input type="text" id="condition" name="condition" required>
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" onclick="thankyou()">Submit</button>
+              </form>
+        </div>
+    </div>
+    
+    <div id="sections">
+        <div id="result"></div>
+    </div>
+    <script src="./travel_recommendation.js"></script>
 
-</body>
+  </body>
 </html>

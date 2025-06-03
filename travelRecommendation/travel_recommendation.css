@@ -1,26 +1,128 @@
-html, body {
+/* Basic CSS for the navigation bar */
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-a{
-    text-decoration: none;
-    color: black;
+html,body{
+    /* background-image: url(./jungle.jpg); */
+    background-color: coral;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
 }
-#navBar{
-    
+
+nav {
+  background-color: rgb(152, 152, 255);
+  transition: background-color 0.2s ease;
+  padding: 20px;
+  display: flex;
+  /* position: fixed; */
+  margin-left: 100px;
+  width: 80%;
+  
+}
+nav:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+nav ul {
+  list-style-type: none;
+  align-content: center;
+  margin-left: auto;
+
+  /* padding: 0; */
+}
+
+nav ul li {
+  display: inline;
+  /* margin-right: 10px; */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+#hstyle{
+   color: black;
+}
+
+#homeTitle{
+    font-size: 40px;
+    color: white;
     display: flex;
-    background-color:rgb(127, 225, 255);
-    padding: 10px;
+    align-content: center;
+    padding: 20px;
+}
+#sections{
+    color: white; 
+    width: 80%;
+    font-size: 30px;
+    background-color: rgb(152, 152, 255);
+    opacity: 80%;
+    padding: 20px;
+    margin-left: 100px;
+}
+#formatP{
+    margin-top: 20px;
+}
+
+#socialSide{
+    float: left;
+    width: 150px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
     align-items: center;
-    justify-content: space-evenly;
+    height: 100%;
+    position: fixed;
+   
 }
-#logo{
-    font-size: 20px;
-    font-style: italic;
+#iconBox{
+    justify-content: center;
+    align-items: center;
+    
 }
+#icons{
+    padding: 10px;
+    margin: 20px;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-size: 50px;
 
-input{
-    border-radius: 30px;
 }
-
-
+#creators{
+    display: block;
+}
+#employees{
+    padding: 20px;
+}
+#person{
+    border: black 2px solid;
+    padding: 20px;
+    margin: 15px;
+}
+#contactForm {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+  #contactForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  #contactForm button:hover {
+    background-color: #0056b3;
+  }
