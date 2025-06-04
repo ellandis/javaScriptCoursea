@@ -1,8 +1,6 @@
 const btnSearch = document.getElementById("btnSearch");
 const btnClear = document.getElementById("btnClear");
 
-
-
 function searchRecommendation() {
   const input = document.getElementById("travelInput").value.toLowerCase();
   const resultDiv = document.getElementById("result");
