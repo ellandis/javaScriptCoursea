@@ -126,3 +126,6 @@ nav a {
   #contactForm button:hover {
     background-color: #0056b3;
   }
+  #result{
+    border: red solid 3px;
+  }
