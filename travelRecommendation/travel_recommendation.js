@@ -50,29 +50,30 @@ function searchRecommendation() {
       cityInfo = city.map((name, i) => ({
         name,
         description: cityD[i],
-        imageUrl: cityPic[i]
-        
+        imageUrl: cityPic[i],
       }));
       templeInfo = temple.map((name, i) => ({
         name,
         description: templeD[i],
-        imageUrl : templePic[i]
+        imageUrl: templePic[i],
       }));
 
       beachInfo = beach.map((name, i) => ({
         name,
         description: beachD[i],
-        imageUrl: beachPic[i]
+        imageUrl: beachPic[i],
       }));
 
-      const cityResults = cityInfo.filter(
-        (spot) =>
-          spot.name.toLowerCase().includes(input) ||
-          spot.description.toLowerCase().includes(input)
-           ).map((spot) => ({
-            ...spot,
-            imageUrl : spot.imageUrl
-           }));
+      const cityResults = cityInfo
+        .filter(
+          (spot) =>
+            spot.name.toLowerCase().includes(input) ||
+            spot.description.toLowerCase().includes(input)
+        )
+        .map((spot) => ({
+          ...spot,
+          imageUrl: spot.imageUrl,
+        }));
       const templeResults = templeInfo.filter(
         (spot) =>
           spot.name.toLowerCase().includes(input) ||
@@ -88,11 +89,11 @@ function searchRecommendation() {
       console.log(templeResults);
       console.log(beachResults);
 
-      if(templeResults){
+      if (templeResults) {
         const tname = templeResults.map((t) => t.name);
         const tdetail = templeResults.map((t) => t.description);
         const tpic = templeResults.map((t) => t.imageUrl);
-        
+
         resultDiv.innerHTML += tname
           .map(
             (n, i) =>
@@ -100,7 +101,7 @@ function searchRecommendation() {
           )
           .join("");
       }
-      if(beachResults){
+      if (beachResults) {
         const bname = beachResults.map((b) => b.name);
         const bdetail = beachResults.map((b) => b.description);
         const bpic = beachResults.map((b) => b.imageUrl);
@@ -116,18 +117,13 @@ function searchRecommendation() {
         const name = cityResults.map((x) => x.name);
         const detail = cityResults.map((x) => x.description);
         const pic = cityResults.map((x) => x.imageUrl);
-        
+
         resultDiv.innerHTML += name
           .map(
-            (n,i) =>
+            (n, i) =>
               `<h2>${n}</h2><p><strong>Description:</strong> ${detail[i]}</p> <img src="${pic[i]}"/>`
           )
           .join("");
-       
-        
-        
-        
-
 
         // console.log(name[0]);
         let timeZone;
